@@ -1,0 +1,9 @@
+<?php
+Auth::routes();
+Route::group(['middleware' => 'web' ], function() {
+
+    Route::get('/', 'HomeController@index');
+    Route::get('{any}', 'Restaurants\Website\App\AppController@index')->name('app')->where('any', '.*');
+
+});
+
