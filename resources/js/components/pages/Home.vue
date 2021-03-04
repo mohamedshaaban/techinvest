@@ -62,14 +62,14 @@ export default {
     methods: {
         deleteBook(book) {
             this.$swal({
-                title: this.$t('pages.are_you_sure'),
-                text: this.$t('pages.you_wont_to_able_revert'),
+                title: 'are you sure',
+                text: 'you wont to able revert',
                 icon: 'warning',
                 showCancelButton: true,
-                cancelButtonText: this.$t('Cancel'),
+                cancelButtonText:  ('Cancel'),
                 confirmButtonColor: '#d33',
                 cancelButtonColor: '#3085d6',
-                confirmButtonText: this.$t('pages.yes_delete_it')
+                confirmButtonText:'yes delete it'
             }).then((result) => {
                 if (result.value) {
                     axios.get("/api/v1/book/delete/"+book.id).then(response => {

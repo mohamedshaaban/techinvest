@@ -72,6 +72,7 @@ export default {
             let  _this = this;
 
 
+            formData.append('id', this.book.id);
             formData.append('title', this.book.title);
             formData.append('description', this.book.description);
             formData.append('price', this.book.price);
