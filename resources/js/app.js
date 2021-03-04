@@ -13,8 +13,8 @@ import routes from "./routes";
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
 import Vuetify from 'vuetify';
-
-
+import 'bootstrap-table/dist/bootstrap-table.css';
+require('bootstrap-table');
 require('./bootstrap');
 Vue.use(VueRouter);
 Vue.use(VueAxios, axios);

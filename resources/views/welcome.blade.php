@@ -63,7 +63,7 @@
             }
         </style>
     </head>
-    <body>
+    <body class="container">
         <div class="flex-center position-ref full-height">
 
 

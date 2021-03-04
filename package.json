@@ -27,6 +27,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "bootstrap-table": "^1.18.2",
         "sweetalert2": "^10.15.5",
         "vue": "^2.6.12",
         "vue-axios": "^3.2.4",
