@@ -2,6 +2,13 @@
     <div  id="content" class="site-content home-v3 page-template-template-homepage-v3 woocommerce-active" tabindex="-1">
         <!-- :style="'background-size:cover; background-position:center center; background-image:url( '+ this.storeSettings.config.background_image.value +' );'" -->
         <!--START INTRO LOCATION DEFINDER -->
+
+        <router-link :to="'/book/add'">
+            Add new Book
+        </router-link>
+        <router-link :to="'/invoices'">
+            invoices
+        </router-link>
         <table  class="table"
                  >
             <thead>
