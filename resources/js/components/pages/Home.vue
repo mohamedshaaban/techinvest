@@ -16,6 +16,7 @@
                 <td>Book ID</td>
                 <td>Title</td>
                 <td>price</td>
+                <td>image</td>
                 <td>shipping price</td>
                 <td>discount precentage</td>
                 <td>final price</td>
@@ -29,6 +30,7 @@
                  <td>{{ book.id }}</td>
                 <td>{{ book.title}}</td>
                 <td>{{ book.price}}</td>
+                <td><img :src="'/'+ book.image_path" width="40" height="40"/></td>
                 <td>{{book.shipping_price}}</td>
                 <td>{{ book.discount_precentage}}</td>
                 <td>{{book.final_price}}</td>

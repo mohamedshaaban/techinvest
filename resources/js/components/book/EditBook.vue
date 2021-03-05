@@ -14,6 +14,11 @@
             </p>
 
             <p class="form-row form-row-first validate-required" id="billing_addresse_name">
+                <label for="image" class="control-label">image</label>
+                <input class="input-text form-control" type="file" id="file" ref="file" @change="handleFileUpload($event)" />
+            </p>
+
+            <p class="form-row form-row-first validate-required" id="billing_addresse_name">
                 <label for="price" class="control-label">price</label>
                 <input type="number" class="input-text form-control"  required name="price" id="price" v-model="book.price" />
             </p>
@@ -65,6 +70,10 @@ export default {
 
     },
     methods: {
+        handleFileUpload(event){
+            this.book.image = this.$refs.file.files[0];
+
+        },
         updateBook(){
             //Initialize the form data
             let formData = new FormData();
@@ -73,6 +82,8 @@ export default {
 
 
             formData.append('id', this.book.id);
+            formData.append('image', this.book.image);
+
             formData.append('title', this.book.title);
             formData.append('description', this.book.description);
             formData.append('price', this.book.price);
