@@ -17,6 +17,9 @@
             </tr>
             </thead>
 
+
+
+
             <tbody>
             <tr v-for="invoice in invoices"
                 :key="invoice.id">
