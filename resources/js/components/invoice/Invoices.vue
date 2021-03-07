@@ -28,6 +28,11 @@
                 <td>{{ invoice.customer_number}}</td>
                 <td>{{invoice.customer_address}}</td>
                 <td>{{ invoice.total}}</td>
+                <td>
+                    <router-link :to="'/invoice/print/'+invoice.id">
+                        Print
+                    </router-link>
+                </td>
 
             </tr>
             </tbody>

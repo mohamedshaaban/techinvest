@@ -19,6 +19,7 @@ Route::group(['prefix'=>'v1','middleware' => 'web'], function(){
     Route::get('book/details/{id}','Books\BooksController@details');
     Route::post('book/save','Books\BooksController@save');
     Route::post('invoice/save','Invoice\InvoiceController@save');
+    Route::get('invoice/{id}','Invoice\InvoiceController@info');
     Route::get('invoice','Invoice\InvoiceController@index');
 
 });

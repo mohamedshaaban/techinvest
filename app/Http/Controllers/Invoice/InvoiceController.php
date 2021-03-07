@@ -15,6 +15,12 @@ class InvoiceController extends Controller
         return ['status'=>'true','orders'=>$orders];
     }
 
+    public function info(Request $request)
+    {
+        $info = orders::with('books')->whereId($request->id)->first();
+        return ['status'=>'true','invoice'=>$info];
+    }
+
 
     public function save(Request  $request)
     {

@@ -21,11 +21,24 @@ Vue.use(VueAxios, axios);
 Vue.use(VueSweetalert2);
 Vue.use(Vuetify);
 window.axios = require('axios');
+import VueHtmlToPaper from 'vue-html-to-paper';
 /**
  * Next, we will create a fresh React component instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+const options = {
+    name: '_blank',
+    specs: [
+        'fullscreen=yes',
+        'titlebar=yes',
+        'scrollbars=yes'
+    ],
+    styles: [
+        'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css',
+        'https://unpkg.com/kidlat-css/css/kidlat.css'
+    ]
+}
 
 require('./components/Example');
 window.Vue = require('vue');
@@ -35,3 +48,8 @@ window.Vue = require('vue');
     router: new VueRouter(routes),
     vuetify: new Vuetify(),
 });
+
+Vue.use(VueHtmlToPaper, options);
+
+// or, using the defaults with no stylesheet
+Vue.use(VueHtmlToPaper);

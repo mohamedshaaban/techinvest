@@ -4,6 +4,7 @@ import EditBook from "./components/book/EditBook";
 import AddBook from "./components/book/AddBook";
 import AddInvoice from "./components/invoice/AddInvoice";
 import Invoices from "./components/invoice/Invoices";
+import PrintInvoic from "./components/invoice/PrintInvoice";
 
 export default {
     mode: 'history',
@@ -44,6 +45,12 @@ export default {
             path: '/invoice/add',
             name: 'invoice.add',
             component: AddInvoice,
+            props: true,
+        },
+        {
+            path: '/invoice/PRINT/:id',
+            name: 'invoice.print',
+            component: PrintInvoic,
             props: true,
         },
 
